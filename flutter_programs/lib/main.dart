@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 
+import 'Dashboard.dart';
+
 void main() {
-  runApp(MaterialApp(
-      title: 'My Flutter App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Dashboard'.toUpperCase()),
-          backgroundColor: Colors.blueGrey,
-        ),
-        body: const Center(
-          child: Text.rich(TextSpan(text: 'My', children: [
-            TextSpan(
-                text: 'Flutter',
-                style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold)),
-            TextSpan(
-                text: 'App',
-                style: TextStyle(fontSize: 30.0, color: Colors.blue))
-          ])),
-        ),
-      )));
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+        title: 'My Flutter App',
+        themeMode: ThemeMode.system,
+        debugShowCheckedModeBanner: false,
+        home: Dashboard());
+  }
 }
