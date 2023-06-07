@@ -19,7 +19,9 @@ class Dashboard extends StatelessWidget {
                 const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             primary: Colors.yellow,
             onPrimary: Colors.black87,
-            elevation: 15),
+            elevation: 15,
+            shadowColor: Colors.yellow,
+            side: const BorderSide(color: Colors.black87, width: 2)),
         child: const Text("Let's Begin"),
       ),
     ));
