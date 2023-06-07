@@ -9,24 +9,45 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-      child: ElevatedButton.icon(
-        onPressed: () {},
-        icon: const Icon(Icons.add_shopping_cart_outlined),
-        label: const Text("Checkout"),
-        style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.all(20.0),
-            fixedSize: const Size(300, 80),
-            textStyle:
-                const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-            primary: Colors.yellow,
-            onPrimary: Colors.black87,
-            elevation: 15,
-            shadowColor: Colors.yellow,
-            side: const BorderSide(color: Colors.black87, width: 2),
-            shape: const StadiumBorder()),
-        // child: const Icon(Icons.add_shopping_cart_outlined),
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          onPressed: () {},
+        ),
+        title: const Text("Home"),
+        actions: [
+          IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_cart)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+          // IconButton(onPressed: () {}, icon: const Icon(Icons.menu_book)),
+        ],
+        elevation: 0,
+        centerTitle: true,
+        backgroundColor: Colors.purple.withOpacity(0.7),
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))),
+        // flexibleSpace: const Image(
+        //   image: NetworkImage(
+        //       "https://media.istockphoto.com/id/468993368/photo/house.jpg?s=612x612&w=0&k=20&c=sazQHQhVq1vR7nsoVmtDCAyXp8sZFhY_xoXrvVp8KCs="),
+        //   fit: BoxFit.cover,
+        // ),
       ),
-    ));
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Text(
+              "AppBar Styles",
+              style: TextStyle(fontSize: 22),
+            ),
+            Text(
+              "Coding with MKS",
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.purple),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
