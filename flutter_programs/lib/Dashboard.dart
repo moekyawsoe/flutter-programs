@@ -14,7 +14,12 @@ class Dashboard extends StatelessWidget {
         onPressed: () {},
         style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.all(20.0),
-            fixedSize: const Size(300, 80)),
+            fixedSize: const Size(300, 80),
+            textStyle:
+                const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            primary: Colors.yellow,
+            onPrimary: Colors.black87,
+            elevation: 15),
         child: const Text("Let's Begin"),
       ),
     ));
