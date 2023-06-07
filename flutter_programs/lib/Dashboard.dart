@@ -12,20 +12,21 @@ class Dashboard extends StatelessWidget {
         title: Text('Dashboard'.toUpperCase()),
         backgroundColor: Colors.blueGrey,
       ),
-      body: Center(
-        child: Text.rich(TextSpan(text: 'Day', children: [
-          TextSpan(
-              text: getNumber().toString(),
-              style:
-                  const TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold)),
-          const TextSpan(
-              text: 'App', style: TextStyle(fontSize: 30.0, color: Colors.blue))
-        ])),
+      body: Column(
+        children: const [
+          Center(
+            child: Image(
+              image: AssetImage("images/16623.jpg"),
+            ),
+          ),
+          Center(
+            child: Image(
+              image: NetworkImage(
+                  "https://media.istockphoto.com/id/468993368/photo/house.jpg?s=612x612&w=0&k=20&c=sazQHQhVq1vR7nsoVmtDCAyXp8sZFhY_xoXrvVp8KCs="),
+            ),
+          ),
+        ],
       ),
     );
   }
-}
-
-int getNumber() {
-  return Random().nextInt(100);
 }
