@@ -10,8 +10,10 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-      child: ElevatedButton(
+      child: ElevatedButton.icon(
         onPressed: () {},
+        icon: const Icon(Icons.add_shopping_cart_outlined),
+        label: const Text("Checkout"),
         style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.all(20.0),
             fixedSize: const Size(300, 80),
@@ -22,8 +24,8 @@ class Dashboard extends StatelessWidget {
             elevation: 15,
             shadowColor: Colors.yellow,
             side: const BorderSide(color: Colors.black87, width: 2),
-            shape: const CircleBorder()),
-        child: const Icon(Icons.add_shopping_cart_outlined),
+            shape: const StadiumBorder()),
+        // child: const Icon(Icons.add_shopping_cart_outlined),
       ),
     ));
   }
