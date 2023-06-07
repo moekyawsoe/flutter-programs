@@ -21,8 +21,9 @@ class Dashboard extends StatelessWidget {
             onPrimary: Colors.black87,
             elevation: 15,
             shadowColor: Colors.yellow,
-            side: const BorderSide(color: Colors.black87, width: 2)),
-        child: const Text("Let's Begin"),
+            side: const BorderSide(color: Colors.black87, width: 2),
+            shape: const CircleBorder()),
+        child: const Icon(Icons.add_shopping_cart_outlined),
       ),
     ));
   }
